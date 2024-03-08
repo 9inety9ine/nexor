@@ -1,0 +1,78 @@
+header {
+	background-color: $color-black;
+	position: sticky;
+	width: 100%;
+	top: 0;
+	z-index: 3;
+	.inner {
+		display: flex;
+		justify-content: space-between;
+	}
+	img {
+		width: 7.5em;
+		height: auto;
+	}
+	nav {
+		height: auto;
+		display: flex;
+		align-items: flex-end;
+		@media (max-width: $w-l) {
+			display: none;
+		}
+		div,
+		ul,
+		li {
+			display: flex;
+			height: 2.25em;
+		}
+		ul {
+			gap: 2em;
+		}
+	}
+	a {
+		font-size: 0.9375em;
+		display: flex;
+		color: $color-white;
+		font-weight: $weight-bold;
+		text-decoration: none;
+		transition: opacity linear 0.15s;
+		&:hover {
+			text-decoration: none;
+		}
+		&.no-hover {
+			opacity: 0.5;
+		}
+	}
+	button {
+		display: none;
+		font: 1em $font-base;
+		appearance: none;
+		width: fit-content;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		@media (max-width: $w-l) {
+			display: flex;
+		}
+		svg {
+			width: 1.75em;
+			height: auto;
+			position: relative;
+			top: 10%;
+			path,
+			line,
+			polygon,
+			circle {
+				fill: none;
+				stroke: $color-white;
+				stroke-width: 1;
+				stroke-miterlimit: 10;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+			}
+		}
+	}
+}

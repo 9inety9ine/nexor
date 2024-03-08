@@ -1,0 +1,31 @@
+.button {
+	appearance: none;
+	background-color: $color-spot;
+	border: none;
+	color: $color-white;
+	font: 1em $font-base;
+	font-weight: $weight-bold;
+	display: flex;
+	width: fit-content;
+	min-height: 3em;
+	text-decoration: none;
+	height: fit-content;
+	align-items: center;
+	justify-content: center;
+	padding: 0 3em;
+	cursor: pointer;
+	outline: none;
+	box-shadow: none;
+	white-space: nowrap;
+	border-radius: $radius;
+	transition-property: background-color, border-color;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	white-space: nowrap;
+	gap: 0.5em;
+	&:hover {
+		outline: none;
+		background-color: $color-spot-accent;
+		text-decoration: none;
+	}
+}

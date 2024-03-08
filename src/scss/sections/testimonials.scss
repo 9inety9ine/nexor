@@ -1,0 +1,8 @@
+@import '../abstracts/variables';
+
+.testimonials {
+	position: relative;
+	z-index: 1;
+	min-height: 10em;
+	background-color: $color-black;
+}

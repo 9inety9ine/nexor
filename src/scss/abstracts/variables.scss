@@ -1,11 +1,12 @@
 // font families
-$font-base: 'poppins', arial, sans-serif;
-$font-display: 'Sarabun', arial, sans-serif;
+$font-base: 'Nunito Sans', arial, sans-serif;
+$font-display: 'Nunito Sans', arial, sans-serif;
 
 // font-weights
 $weight-regular: 300;
 $weight-bold: 500;
-$weight-display: 700;
+$weight-heavy: 800;
+$weight-display: 800;
 
 // theme colours
 $color-white: #fff;
@@ -13,6 +14,10 @@ $color-grey-light: #f0f0f0;
 $color-grey-medium: #ccc;
 $color-grey-dark: #1f1f1f;
 $color-black: #000;
+$color-spot: #773a92;
+$color-spot-accent: #652482;
+
+$radius: 0.25em;
 
 // desktop breakpoints
 $w-xxl: 1680px;
@@ -24,15 +29,3 @@ $w-ms: 520px;
 //mobile breakpoints
 $w-s: 440px;
 $w-xs: 360px;
-
-// image preload mixin
-@mixin preload {
-	position: relative;
-	opacity: 1;
-	transition-property: opacity;
-	transition-duration: 0.25s;
-	transition-timing-function: linear;
-	&.preload {
-		opacity: 0;
-	}
-}

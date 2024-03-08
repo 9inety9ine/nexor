@@ -1,0 +1,10 @@
+@import '../abstracts/variables';
+
+.services {
+	position: relative;
+	z-index: 1;
+	min-height: 30em;
+	background-color: $color-spot;
+	padding-top: 10em;
+	margin-top: -10em;
+}

@@ -1,3 +1,79 @@
+@import '../abstracts/variables';
+
 .hero {
 	position: relative;
+	height: calc(100vh - 74px);
+	min-height: 50em;
+	z-index: 2;
+	@media (max-width: $w-m) {
+		height: fit-content;
+		min-height: fit-content;
+	}
+	.inner {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: 5em;
+		@media (max-width: $w-m) {
+			height: fit-content;
+			padding: 5em 0;
+		}
+	}
+	.masthead {
+		width: 100%;
+		max-width: $w-m;
+		text-align: center;
+		@media (max-width: $w-m) {
+			padding: 0 2em;
+		}
+	}
+	.actions {
+		display: flex;
+		justify-content: center;
+		padding-top: 2em;
+	}
+	.logos {
+		padding-top: 5em;
+		@media (max-width: $w-l) {
+			padding-top: 3em;
+		}
+		p {
+			margin-bottom: 0.75em;
+		}
+		ul {
+			display: flex;
+			justify-content: center;
+			gap: 2em;
+			@media (max-width: $w-l) {
+				gap: 1em;
+			}
+			li {
+				display: flex;
+				align-items: center;
+				gap: 1em;
+			}
+			span {
+				font-size: 0.875em;
+				font-weight: $weight-bold;
+				@media (max-width: $w-l) {
+					display: none;
+				}
+			}
+		}
+	}
+	h1 {
+		text-transform: capitalize;
+		margin: 0;
+	}
+	p {
+		font-size: 1.75em;
+		margin: 0;
+		margin-top: 0.53333333333em;
+		@media (max-width: $w-l) {
+			font-size: 1.25em;
+			margin-top: 0.5em;
+		}
+	}
 }

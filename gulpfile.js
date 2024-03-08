@@ -26,6 +26,16 @@ gulp.task('coreStyles', function () {
 		.pipe(gulp.dest('assets/'));
 });
 
+gulp.task('sectionStyles', function () {
+	return gulp
+		.src('src/scss/sections/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(cleanCSS({ compatibility: 'ie8' }))
+		.pipe(autoprefixer())
+		.pipe(rename({ extname: '.css' }))
+		.pipe(gulp.dest('assets/'));
+});
+
 gulp.task('coreScripts', function () {
 	return browserify({ entries: srcPaths.scripts, debug: true })
 		.transform('babelify', { presets: ['@babel/preset-env'] })
@@ -42,9 +52,25 @@ gulp.task('coreScripts', function () {
 		.pipe(gulp.dest('./assets'));
 });
 
-gulp.task('watch', function () {
-	gulp.watch(srcPaths.sass, gulp.series('coreStyles'));
-	gulp.watch('src/js/*.js', gulp.series('coreScripts'));
+gulp.task('componentScripts', function () {
+	return gulp
+		.src('src/js/components/*.js')
+		.pipe(buffer())
+		.pipe(
+			uglify().on('error', function (e) {
+				console.log(e);
+				this.emit('end');
+			})
+		)
+		.pipe(rename({ extname: '.js' }))
+		.pipe(gulp.dest('assets/'));
 });
 
-gulp.task('default', gulp.series('coreStyles', 'coreScripts'));
+gulp.task('watch', function () {
+	gulp.watch(srcPaths.sass, gulp.series('coreStyles'));
+	gulp.watch(srcPaths.sass, gulp.series('sectionStyles'));
+	gulp.watch('src/js/core/*.js', gulp.series('coreScripts'));
+	gulp.watch('src/js/components/*.js', gulp.series('componentScripts'));
+});
+
+gulp.task('default', gulp.series('coreStyles', 'sectionStyles', 'coreScripts', 'componentScripts'));

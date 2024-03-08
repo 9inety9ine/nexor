@@ -9,7 +9,7 @@ body {
 	font: 16px $font-base;
 	font-weight: $weight-regular;
 	color: $color-white;
-	line-height: 1.25;
+	line-height: 1.35;
 	-webkit-font-smoothing: antialiased;
 	@media screen and (max-width: $w-s) {
 		font-size: 3.636363636vw; // 16px at 440 breakpoint
@@ -26,8 +26,11 @@ h6 {
 	line-height: 1.2;
 	margin-bottom: 0.83333333333em; // 20px
 	&.display {
-		font-size: 3em; // 48px
+		font-size: 4em; // 48px
 		margin-bottom: 0.41666666666em; // 20px
+		@media (max-width: $w-m) {
+			font-size: 2.5em;
+		}
 	}
 	&.large {
 		font-size: 2.5em; // 40px

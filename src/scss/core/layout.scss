@@ -2,15 +2,15 @@
 	width: 100%;
 	max-width: 100%;
 	margin: 0 auto;
-	padding: 0 4em;
+	padding: 6em 4em;
 	@media (max-width: $w-xl) {
-		padding: 0 3em;
+		padding: 4em 3em;
 	}
 	@media (max-width: $w-l) {
-		padding: 0 2em;
+		padding: 3em 2em;
 	}
 	@media (max-width: $w-s) {
-		padding: 0 1.5em;
+		padding: 2em 1.5em;
 	}
 	&--xx-large {
 		max-width: $w-xxl;
@@ -30,4 +30,12 @@
 	&--x-small {
 		max-width: $w-xs;
 	}
+	&--no-padding {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+.page-content {
+	background-color: $color-white;
+	color: $color-black;
 }
