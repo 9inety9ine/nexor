@@ -5,10 +5,10 @@ body {
 	scroll-behavior: smooth;
 }
 body {
-	background: $color-black;
+	background: $color-grey-dark;
 	font: 16px $font-base;
 	font-weight: $weight-regular;
-	color: $color-black;
+	color: $color-white;
 	line-height: 1.25;
 	-webkit-font-smoothing: antialiased;
 	@media screen and (max-width: $w-s) {
