@@ -1,0 +1,38 @@
+// font families
+$font-base: 'poppins', arial, sans-serif;
+$font-display: 'Sarabun', arial, sans-serif;
+
+// font-weights
+$weight-regular: 300;
+$weight-bold: 500;
+$weight-display: 700;
+
+// theme colours
+$color-white: var(--color-white);
+$color-grey-light: var(--color-grey-light);
+$color-grey-medium: var(--color-grey-medium);
+$color-grey-dark: var(--color-grey-dark);
+$color-black: var(--color-black);
+
+// desktop breakpoints
+$w-xxl: 1680px;
+$w-xl: 1440px;
+// tablet breakpoints
+$w-l: 1024px;
+$w-m: 768px;
+$w-ms: 520px;
+//mobile breakpoints
+$w-s: 440px;
+$w-xs: 360px;
+
+// image preload mixin
+@mixin preload {
+	position: relative;
+	opacity: 1;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: linear;
+	&.preload {
+		opacity: 0;
+	}
+}
