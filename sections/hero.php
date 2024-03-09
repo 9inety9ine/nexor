@@ -7,7 +7,7 @@
 <?php $target = get_field('hero_button_target');?>
 <?php $logo_text = get_field('hero_logo_text');?>
 
-<section class="hero" style="background: url(<?php echo $background; ?>) no-repeat center bottom / cover;">
+<section class="hero">
     <div class="inner">
         <div class="masthead">
             <?php if ($title) { ?>
@@ -39,4 +39,5 @@
             </div>
         </div>
     </div>
+    <img data-src="<?php echo $background; ?>" width="" height="" class="background preload">
 </section>

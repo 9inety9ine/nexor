@@ -8,6 +8,11 @@ header {
 		display: flex;
 		justify-content: space-between;
 	}
+	.branding {
+		@media (max-width: $w-l) {
+			order: 2;
+		}
+	}
 	img {
 		width: 7.5em;
 		height: auto;
@@ -56,6 +61,7 @@ header {
 		cursor: pointer;
 		@media (max-width: $w-l) {
 			display: flex;
+			order: 1;
 		}
 		svg {
 			width: 1.75em;

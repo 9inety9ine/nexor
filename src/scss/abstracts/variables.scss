@@ -30,3 +30,14 @@ $w-ms: 520px;
 //mobile breakpoints
 $w-s: 440px;
 $w-xs: 360px;
+
+// image preload mixin
+@mixin preload {
+	opacity: 1;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: linear;
+	&.preload {
+		opacity: 0;
+	}
+}
