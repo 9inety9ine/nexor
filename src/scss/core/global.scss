@@ -33,7 +33,7 @@ h6 {
 		}
 	}
 	&.large {
-		font-size: 2.5em; // 40px
+		font-size: 3em; // 40px
 		margin-bottom: 0.5em; // 20px
 	}
 	&.medium {
@@ -49,6 +49,12 @@ p {
 	font-size: 1em; // 16px
 	margin-bottom: 1em; // 16px
 	line-height: 1.4;
+	&.small {
+		font-size: 0.875em;
+	}
+	&.large {
+		font-size: 1.5em;
+	}
 }
 strong {
 	font-weight: $weight-bold;

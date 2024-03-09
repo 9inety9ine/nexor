@@ -3,5 +3,89 @@
 .contact {
 	position: relative;
 	z-index: 1;
-	background-color: $color-spot;
+	background: linear-gradient(-45deg, #692da0, #835ea0);
+	.inner {
+		display: grid;
+		grid-template-columns: 1fr 520px;
+		gap: 6em;
+		@media (max-width: $w-l) {
+			grid-template-columns: 1fr;
+			gap: 3em;
+		}
+	}
+	.content {
+		display: flex;
+		align-items: center;
+		.content-wrapper {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding-right: 3em;
+			.certified-logos {
+				margin-top: 5em;
+				@media (max-width: $w-l) {
+					margin-top: 2.5em;
+				}
+				@media (max-width: $w-m) {
+					margin-top: 0;
+				}
+			}
+			ul {
+				display: flex;
+				gap: 2em;
+				@media (max-width: $w-l) {
+					gap: 1em;
+				}
+				img {
+					@include preload;
+					border-radius: $radius;
+				}
+			}
+		}
+	}
+	.form {
+		width: 100%;
+		position: relative;
+		h3,
+		p {
+			margin: 0;
+		}
+		form {
+			height: fit-content;
+			background-color: $color-white;
+			color: $color-black;
+			padding: 3em 2em;
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			justify-content: space-between;
+			border-radius: $radius-large;
+			@media (max-width: $w-m) {
+				padding: 2em;
+			}
+		}
+		input {
+			appearance: none;
+			font: 1em $font-base;
+			height: 3em;
+			border: 1px solid $color-grey-medium;
+			background-color: $color-white;
+			padding: 0 1em;
+			border-radius: $radius;
+			width: 100%;
+			&:first-of-type {
+				margin-top: 1.5em;
+				@media (max-width: $w-m) {
+					margin-top: 0;
+				}
+			}
+		}
+		button {
+			margin: 1.5em 0;
+			@media (max-width: $w-m) {
+				margin: 0;
+			}
+		}
+	}
 }
