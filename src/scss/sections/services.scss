@@ -4,7 +4,87 @@
 	position: relative;
 	z-index: 1;
 	min-height: 30em;
-	background-color: $color-spot;
+	background-color: $color-black;
 	padding-top: 10em;
 	margin-top: -10em;
+	.header {
+		text-align: center;
+		h2 {
+			font-weight: $weight-display;
+		}
+	}
+	.tab-titles {
+		display: flex;
+		justify-content: center;
+		gap: 5em;
+		margin-bottom: 3em;
+		button {
+			font: 1em $font-base;
+			appearance: none;
+			background-color: transparent;
+			border: none;
+			color: $color-white;
+			cursor: pointer;
+			&.active {
+				span {
+					opacity: 1;
+				}
+			}
+			span {
+				font-size: 2em;
+				font-weight: $weight-heavy;
+				opacity: 0.6;
+				transition: opacity linear.15s;
+			}
+		}
+	}
+	.tab-elements {
+		width: 100%;
+		max-width: $w-l;
+		margin: 0 auto;
+		.slides {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2em;
+			.slide {
+				border-radius: $radius-large;
+				height: 0;
+				padding-bottom: 60%;
+				position: relative;
+				color: $color-white;
+				.slide-content {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					display: grid;
+					grid-template-columns: 1fr auto;
+					padding: 1.5em 2em;
+				}
+				.text {
+					display: flex;
+					flex-direction: column;
+					gap: 0.5em;
+					.title {
+						font-size: 1.5em;
+						font-weight: $weight-heavy;
+					}
+					.strapline {
+						font-size: 0.875em;
+					}
+				}
+				.icon {
+					display: flex;
+					align-items: flex-end;
+					justify-content: center;
+				}
+			}
+		}
+	}
+	.tab {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
 }

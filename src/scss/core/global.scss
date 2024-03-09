@@ -22,8 +22,8 @@ h4,
 h5,
 h6 {
 	font: 1.5em $font-display; // 24px
-	font-weight: $weight-display;
-	line-height: 1.2;
+	font-weight: $weight-heavy;
+	line-height: 1.1;
 	margin-bottom: 0.83333333333em; // 20px
 	&.display {
 		font-size: 4em; // 48px
