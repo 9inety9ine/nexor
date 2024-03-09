@@ -44,7 +44,11 @@
                                             <span class="title"><?php echo $slide_title; ?></span>
                                             <span class="strapline"><?php echo $slide_text; ?></span>
                                         </div>
-                                        <div class="icon">ICON</div>
+                                        <div class="icon">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve">
+                                                <path d="M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M20.5,24.7c-0.8,0.9-2.1,0.9-2.9,0c-0.8-0.9-0.8-2.2,0-3.1l3.3-3.4H6.1c-1.2,0-2.1-1-2.1-2.2c0-1.2,0.9-2.2,2.1-2.2h14.8l-3.3-3.4c-0.8-0.9-0.8-2.2,0-3.1c0.8-0.9,2.1-0.9,3,0l6.8,7.2c0.4,0.4,0.6,0.9,0.6,1.5c0,0.6-0.2,1.1-0.6,1.5L20.5,24.7z"/>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </a>
 
