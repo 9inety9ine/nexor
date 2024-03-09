@@ -4,7 +4,7 @@
 	position: relative;
 	z-index: 1;
 	min-height: 30em;
-	background-color: $color-black;
+	background: $color-black url(services-bg.png) no-repeat 100% 0 / cover;
 	padding-top: 10em;
 	margin-top: -10em;
 	.header {
@@ -18,6 +18,14 @@
 		justify-content: center;
 		gap: 5em;
 		margin-bottom: 3em;
+		@media (max-width: $w-l) {
+			gap: 3em;
+		}
+		@media (max-width: $w-m) {
+			flex-direction: column;
+			align-items: center;
+			gap: 1em;
+		}
 		button {
 			font: 1em $font-base;
 			appearance: none;
@@ -35,6 +43,9 @@
 				font-weight: $weight-heavy;
 				opacity: 0.6;
 				transition: opacity linear.15s;
+				@media (max-width: $w-l) {
+					font-size: 1.5em;
+				}
 			}
 		}
 	}
@@ -46,12 +57,17 @@
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 2em;
+			@media (max-width: $w-m) {
+				grid-template-columns: repeat(1, 1fr);
+				gap: 1em;
+			}
 			.slide {
 				border-radius: $radius-large;
 				height: 0;
 				padding-bottom: 60%;
 				position: relative;
 				color: $color-white;
+				box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 				.slide-content {
 					position: absolute;
 					left: 0;
@@ -85,6 +101,33 @@
 		display: none;
 		&.active {
 			display: block;
+		}
+	}
+	.our-customers {
+		margin-top: 5em;
+		text-align: center;
+		text-transform: uppercase;
+		@media (max-width: $w-m) {
+			margin-top: 3em;
+		}
+		.title {
+			opacity: 0.5;
+		}
+		ul {
+			display: flex;
+			justify-content: space-between;
+			gap: 2em;
+			margin: 4em auto 3em auto;
+			@media (max-width: $w-m) {
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 2em;
+			}
+			li {
+				width: 100%;
+				max-width: 11em;
+				opacity: 0.5;
+			}
 		}
 	}
 }
