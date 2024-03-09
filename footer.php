@@ -1,5 +1,5 @@
     <footer>
-        <div class="wrap wrap--x-large">
+        <div class="wrap wrap--m-large">
             <div class="inner">
                 <div class="column column-1">
                     <div class="column-title">

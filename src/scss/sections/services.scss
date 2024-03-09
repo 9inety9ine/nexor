@@ -152,6 +152,10 @@
 				width: 100%;
 				max-width: 10em;
 				opacity: 0.5;
+				transition: opacity linear 0.25s;
+				&:hover {
+					opacity: 1;
+				}
 			}
 			img {
 				@include preload;
