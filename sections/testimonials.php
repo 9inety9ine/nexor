@@ -18,7 +18,14 @@
                         <div class="swiper-slide">
                             <div class="testimonial">
                                 <div class="testimonial-image">
-                                    <?php echo wp_get_attachment_image( $testimonial_image, 'full' ); ?>
+                                    <img 
+                                        src="<?php bloginfo('template_directory'); ?>/assets/preload.gif" 
+                                        data-src="<?php echo esc_url($testimonial_image['url']); ?>" 
+                                        alt="<?php echo $testimonial_image['alt']; ?>" 
+                                        width="<?php echo $testimonial_image['width']; ?>" 
+                                        height="<?php echo $testimonial_image['height']; ?>"
+                                        class="preload"
+                                    >
                                 </div>
                                 <div class="testimonial-content">
                                     <p><?php echo $testimonial_quote; ?></p>

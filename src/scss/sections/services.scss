@@ -153,6 +153,9 @@
 				max-width: 10em;
 				opacity: 0.5;
 			}
+			img {
+				@include preload;
+			}
 		}
 	}
 }

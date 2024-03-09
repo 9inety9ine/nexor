@@ -75,7 +75,14 @@
                     $customer_logo = get_sub_field('customer_logo');
                     ?>
                     <li>
-                        <?php echo wp_get_attachment_image( $customer_logo, 'full' ); ?>
+                        <img 
+                            src="<?php bloginfo('template_directory'); ?>/assets/preload.gif" 
+                            data-src="<?php echo esc_url($customer_logo['url']); ?>" 
+                            alt="<?php echo $customer_logo['alt']; ?>" 
+                            width="<?php echo $customer_logo['width']; ?>" 
+                            height="<?php echo $customer_logo['height']; ?>"
+                            class="preload"
+                        >
                     </li>
                 <?php endwhile; ?>
                 </ul>

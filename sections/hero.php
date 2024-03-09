@@ -30,7 +30,14 @@
                     $logo_label = get_sub_field('logo_label');
                     ?>
                     <li>
-                        <?php echo wp_get_attachment_image( $logo_image, 'full' ); ?>
+                        <img 
+                            src="<?php bloginfo('template_directory'); ?>/assets/preload.gif" 
+                            data-src="<?php echo esc_url($logo_image['url']); ?>" 
+                            alt="<?php echo $logo_label; ?>" 
+                            width="<?php echo $logo_image['width']; ?>" 
+                            height="<?php echo $logo_image['height']; ?>"
+                            class="preload"
+                        >
                         <span><?php echo $logo_label; ?></span>
                     </li>
                 <?php endwhile; ?>
