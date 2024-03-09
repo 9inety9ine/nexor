@@ -1,3 +1,78 @@
-header {
+footer {
 	position: relative;
+	.inner {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		@media (max-width: $w-m) {
+			grid-template-columns: 1fr;
+			gap: 3em;
+		}
+		.column-1 {
+			@media (max-width: $w-m) {
+				order: 2;
+			}
+		}
+		.column-2 {
+			@media (max-width: $w-m) {
+				order: 1;
+			}
+		}
+	}
+	.menus-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2em;
+		@media (max-width: $w-m) {
+			grid-template-columns: 1fr 25%;
+		}
+		@media (max-width: $w-s) {
+			grid-template-columns: 1fr auto;
+		}
+	}
+	nav {
+		margin-bottom: 1.5em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 0.25em;
+		}
+		a {
+			color: $color-white;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	form {
+		width: 25em;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		@media (max-width: $w-l) {
+			width: 20em;
+		}
+		@media (max-width: $w-m) {
+			width: 100%;
+		}
+	}
+	input {
+		appearance: none;
+		font: 1em $font-base;
+		height: 3em;
+		border: none;
+		background-color: $color-white;
+		padding: 0 1em;
+		border-radius: $radius;
+		width: 100%;
+	}
+	button {
+		margin-top: 1em;
+		@media (max-width: $w-m) {
+			margin-top: 0;
+		}
+	}
 }
