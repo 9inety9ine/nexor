@@ -11,7 +11,7 @@
 			padding: 4em 3em 6em 3em;
 		}
 		@media (max-width: $w-s) {
-			padding: 2em 0 4em 0;
+			padding: 2em 0;
 		}
 	}
 	.header {
@@ -22,6 +22,9 @@
 			-webkit-text-fill-color: transparent;
 			margin-bottom: 2em;
 			font-weight: $weight-display;
+			@media (max-width: $w-s) {
+				margin-bottom: 1em;
+			}
 		}
 	}
 	.swiper-slide {
