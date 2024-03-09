@@ -41,3 +41,15 @@ $w-xs: 360px;
 		opacity: 0;
 	}
 }
+@mixin preload_transition {
+	position: relative;
+	top: -1em;
+	opacity: 1;
+	transition-property: opacity, top;
+	transition-duration: 0.25s;
+	transition-timing-function: linear;
+	&.preload {
+		top: 0;
+		opacity: 0;
+	}
+}

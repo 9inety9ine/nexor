@@ -37,7 +37,6 @@
 		@media (max-width: $w-l) {
 			grid-template-columns: 1fr;
 			grid-template-rows: auto 1fr;
-			height: auto;
 		}
 		cursor: grab;
 		.testimonial-image {
@@ -48,7 +47,7 @@
 			overflow: hidden;
 			@media (max-width: $w-l) {
 				height: 0;
-				padding-bottom: 50%;
+				padding-bottom: 70%;
 			}
 			img {
 				position: absolute;

@@ -19,6 +19,7 @@ window.initImageLoad = () => {
 				image.onload = () => {
 					image.removeAttribute('data-src');
 					image.classList.remove('preload');
+					image.parentNode.classList.remove('preload');
 				};
 			}
 		};

@@ -38,7 +38,7 @@
                                 <?php $slide_click_target = get_sub_field('slide_click_target'); ?>
                                 <?php $slide_bg = get_sub_field('slide_background'); ?>
 
-                                <a href="<?php echo $slide_click_target; ?>" class="slide" style="background: url(<?php echo $slide_bg; ?>) no-repeat 50% 50% / cover;">
+                                <a href="<?php echo $slide_click_target; ?>" class="slide preload">
                                     <div class="slide-content">
                                         <div class="text">
                                             <span class="title"><?php echo $slide_title; ?></span>
@@ -50,6 +50,7 @@
                                             </svg>
                                         </div>
                                     </div>
+                                    <img src="<?php bloginfo('template_directory'); ?>/assets/preload-services.gif" data-src="<?php echo $slide_bg; ?>" width="640" height="360" alt="<?php echo $slide_title; ?>" class="background">
                                 </a>
 
                             <?php endwhile; ?>
