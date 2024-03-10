@@ -8,6 +8,7 @@
     <?php } ?>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+	<meta name="description" content="Nexor Test Theme" />
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/assets/favicon.png" type="image/x-icon"/>
 	<?php wp_head(); ?>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +31,7 @@
 				<nav>
 					<?php wp_nav_menu(array('theme_location'=>'main')); ?>
 				</nav>
-				<button>
+				<button aria-label="Mobile Menu">
 					<?php include_once('snippets/icon-menu.svg'); ?>
 				</button>
 			</div>

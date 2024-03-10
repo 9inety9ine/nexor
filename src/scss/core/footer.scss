@@ -37,11 +37,16 @@ footer {
 		ul {
 			display: flex;
 			flex-direction: column;
-			gap: 0.25em;
+			// gap: 0.25em;
 		}
 		a {
 			color: $color-white;
 			text-decoration: none;
+			display: block;
+			padding: 0.125em 0;
+			@media (max-width: $w-s) {
+				padding: 0.5em 0;
+			}
 			&:hover {
 				text-decoration: underline;
 			}

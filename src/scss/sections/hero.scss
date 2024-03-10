@@ -69,6 +69,14 @@
 				display: flex;
 				align-items: center;
 				gap: 1em;
+				img {
+					@media (max-width: $w-s) {
+						width: auto;
+						height: auto;
+						max-width: 5em;
+						max-height: 2.5em;
+					}
+				}
 			}
 			span {
 				font-size: 0.875em;

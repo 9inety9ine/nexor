@@ -33,7 +33,7 @@
                         <img 
                             src="<?php bloginfo('template_directory'); ?>/assets/preload.gif" 
                             data-src="<?php echo esc_url($logo_image['url']); ?>" 
-                            alt="<?php echo $logo_label; ?>" 
+                            alt="<?php echo $logo_image['alt']; ?>" 
                             width="<?php echo $logo_image['width']; ?>" 
                             height="<?php echo $logo_image['height']; ?>"
                             class="preload"
@@ -46,5 +46,5 @@
             </div>
         </div>
     </div>
-    <img data-src="<?php echo $background; ?>" width="" height="" class="background preload">
+    <img data-src="<?php echo $background; ?>" width="2543" height="800" alt="Background Image" class="background preload">
 </section>
